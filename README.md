@@ -6,9 +6,9 @@ A computer vision model for detecting seed heads in zoysia grass images, develop
 
 ## Overview
 
-Manually counting seed heads across large field trials is slow and labor-intensive. This model automates seed head detection from RGB images, supporting high-throughput phenotyping of zoysia cultivars for [TODO: specific trait/breeding goal — e.g., seed head density per plot]. The model is designed to give a reliable estimate of seed head counts per plot or per image.
+Manually counting seed heads across large field trials is slow and labor-intensive. This model automates seed head detection from RGB images, supporting high-throughput phenotyping of zoysia cultivars. The model is designed to give a reliable estimate of seed head counts per image.
 
-This repository contains the trained model, inference scripts, and example usage so others can apply it to their own images.
+This repository contains links to the trained model, inference scripts, and example usage so others can apply it to their own images.
 
 ## Model Details
 
@@ -26,9 +26,7 @@ This repository contains the trained model, inference scripts, and example usage
 
 ### Try it without installing anything
 
-[TODO: Link to a Colab notebook where someone can upload an image and run inference]
-
-**[Open in Colab](#)**
+**[Open in Colab](https://colab.research.google.com/github/precision-sustainable-ag/zoysia-seed-head-detector/blob/main/colab_demo.ipynb)**
 
 ### Run locally
 
@@ -54,7 +52,7 @@ For the full list of arguments — including options to save per-image counts, Y
 
 ### Model weights
 
-- Available on NCSU NFS storage at `/rsstu/users/s/srmilla/NIFA_Zoysia/zoysia-seed-head-detector/model` (for NCSU collaborators with cluster access)
+- Available on NCSU NFS storage at `/rsstu/users/s/srmilla/NIFA_Zoysia/zoysia-seed-head-detector/model/zoysia-seedhead-yolov8m-v1.pt` (for NCSU collaborators with cluster access)
 
 ## Limitations
 
