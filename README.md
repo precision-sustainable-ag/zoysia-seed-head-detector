@@ -26,7 +26,7 @@ This repository contains links to the trained model, inference scripts, and exam
 
 ### Try it without installing anything
 
-**[Open in Colab](https://colab.research.google.com/github/precision-sustainable-ag/zoysia-seed-head-detector/blob/main/colab_demo.ipynb)**
+**[Open in Colab](https://colab.research.google.com/github/precision-sustainable-ag/zoysia-seed-head-detector/blob/develop/colab_demo.ipynb)**
 
 ### Run locally
 
