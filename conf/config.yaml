@@ -1,0 +1,46 @@
+# Hydra defaults and settings. Ignore these (don't change)
+defaults:
+  - _self_
+  - paths: default
+  - crop: default
+  - cvat: default
+  - train: default
+  - evaluate: default
+  - override hydra/job_logging: custom
+
+hydra:
+  run:
+    dir: ${paths.log_dir}/${batch_id}/${job_now}
+  output_subdir: ${hydra.run.dir}/hydra
+
+job_now: &nowdir ${now:%Y-%m-%d}/${now:%H:%M:%S}
+
+############################################
+# Main configuration for the current batch #
+############################################
+project_name: zoysia
+batch_id:
+degrees:
+create_issue: false # set to true to create an issue in the bbot repo for this batch
+gh_reviewer: # nnotaba or mkutu, map0425
+
+# Toggle the mode you want to run
+mode: train # crop
+
+# Toggle the tasks you want to run in each mode
+tasks: # task for each mode
+  crop:
+    crop_bbox: false
+    
+  cvat:
+    upload: false
+    # export_detection: true
+    export: true
+
+  train:
+    train_detector: true
+
+  evaluate:
+    detect: false
+
+

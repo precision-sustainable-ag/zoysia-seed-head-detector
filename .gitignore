@@ -1,0 +1,17 @@
+.logs/
+data/
+__pycache__/
+.vscode/
+*.pyc
+.DS_Store
+*.sqlite3
+mlruns/
+outputs/
+logs/
+runs/
+train_projects/
+*.pt
+run.sh
+.keys/
+*egg-info/
+helpers/
