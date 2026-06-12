@@ -1,5 +1,0 @@
-crop_bbox:
-  center_right_only: true
-cam_angles:
-  - 20
-num_workers: 10
