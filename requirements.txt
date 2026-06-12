@@ -1,0 +1,8 @@
+# torch/torchvision pinned to versions known to perform well for this model.
+# ultralytics' default dependency resolution may pull a newer torch with
+# worse inference performance on some setups.
+torch==2.6.0
+torchvision==0.21.0
+
+ultralytics>=8.4.0
+opencv-python>=4.8.0

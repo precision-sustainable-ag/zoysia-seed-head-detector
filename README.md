@@ -3,7 +3,6 @@
 A computer vision model for detecting seed heads in zoysia grass images, developed for image-based phenotyping.
 
 ![Example detection](docs/assets/example1.jpg)
-<!-- TODO: rename your example image file before committing — avoid filenames containing emails/usernames -->
 
 ## Overview
 
@@ -40,28 +39,27 @@ pip install -r requirements.txt
 ```
 
 ```bash
-python detect.py --image path/to/your/image.jpg --output results/ --conf 0.10 --iou 0.25 --max_det 2000
+python detect.py --model path/to/weights.pt --source path/to/your/image.jpg --output results/ --conf 0.10 --iou 0.35 --max-det 3000
 ```
-
-[TODO: adjust commands/flags to match your actual scripts]
 
 Recommended starting inference settings (see [Model Performance Notes](docs/model_performance.md) for why these differ from typical defaults):
 
 ```yaml
 conf: 0.10
-iou: 0.25
-max_det: 2000
+iou: 0.35
+max-det: 3000
 ```
+
+For the full list of arguments — including options to save per-image counts, YOLO-format labels, and a detections CSV for batch runs — see [Running Detection](docs/usage.md).
 
 ### Model weights
 
-- Available on NCSU NFS storage at `/rsstu/research-projects/s/srmilla/NIFA_Zoysia/zoysia-seed-head-detector/model` (for NCSU collaborators with cluster access)
+- Available on NCSU NFS storage at `/rsstu/users/s/srmilla/NIFA_Zoysia/zoysia-seed-head-detector/model` (for NCSU collaborators with cluster access)
 
 ## Limitations
 
 - **Image quality matters most.** Blurry images significantly reduce detection accuracy — improving image capture quality is the most direct way to improve results.
-- **Dense clusters.** In areas with 10–30 seed heads packed closely together, the model may underestimate counts, miss individual seed heads, or merge multiple seed heads into one detection.
-
+- **Dense clusters.** In areas with 10–30 seed heads packed closely together, the model may underestimate counts, miss individual seed heads, or merge multiple seed heads into one detection. See [this example](docs/assets/example2.jpg) — notice in the top left corner, many clusters of seed heads go unnoticed. In this example the detector identified more than 2,000 seed heads, but as shown, it still missed many additional seed heads that would be difficult for even a seasoned field agronomist to differentiate.
 
 ## License
 
